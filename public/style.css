@@ -1,0 +1,143 @@
+html {
+  font-size: 17px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+h1 {
+  text-align: center;
+  margin-top:3.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+main {
+  width: 60%;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  align-content:center;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+/* .new-btn {
+  border: solid 1px;
+  text-align: center;
+  width: 50%;
+  font-size: 3rem;
+  padding: 0.6rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+} */
+
+.new-card {
+/*   display:none; */
+  width:80%;
+  margin:auto;
+  padding: 0.5rem;
+  min-height: 100px; 
+  background-color: #263759;
+  border-radius:2px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+}
+
+#title {
+  width: 100%;
+  font-size:1rem;
+  border:none;
+ }
+
+
+textarea {
+  width: 100%;
+/*   min-height:4rem; */
+  font-size:1rem;
+  border: none;
+  resize:none;
+}
+
+input[type=submit] {
+  float:right;
+  text-transform: uppercase;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 3px #666666;
+  -moz-box-shadow: 1px 1px 3px #666666;
+  box-shadow: 1px 1px 3px #666666;
+  font-family: Courier New;
+  color: #453e87;
+  font-size: 20px;
+  background: #bcd7e8;
+  padding: 5px 10px 5px 10px;
+  border: solid #544f3f 2px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor:pointer;
+}
+
+input[type=submit]:hover {
+  border: dotted orange 2px;
+}
+
+.card {
+  background-color: rgba(169, 202, 207, 0.6);
+  border-radius: 2px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+  width:80%;
+  margin:auto;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.title, .date {
+  display:inline-block;
+}
+
+.date {
+  float:right;
+}
+
+.title {
+ 
+}
+
+.action-btn {
+  float:right;
+}
+
+.edit, .del {
+  text-transform: uppercase;
+  -webkit-border-radius: 1;
+  -moz-border-radius: 1;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 3px #666666;
+  -moz-box-shadow: 1px 1px 3px #666666;
+  box-shadow: 1px 1px 3px #666666;
+  font-family: Courier New;
+  color: #453e87;
+  font-size: 1rem;
+  background: #bcd7e8;
+  padding: 1px 2px 1px 2px;
+  border: solid #544f3f 0.5px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor:pointer;
+}
+
+.edit:hover {
+  background: orange;
+  color:black;
+}
+
+.del:hover {
+  background:red;
+  color:white;
+}
