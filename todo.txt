@@ -1,0 +1,9 @@
+Stack:
+  * Node
+  * MongoDB - Mongoose/Raw Client
+  * MLAB
+  * Express
+  * Test environment - Mocha?
+  * Templating Engine - TBD
+  
+Responsive - Media Queries
