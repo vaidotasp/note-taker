@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
     .exec(function(err, cards) {
       if (err) return next(err)
       //res.json(cards)
-      res.render('index.pug')
+      res.render('index', {cards: cards})
     })
 })
 
