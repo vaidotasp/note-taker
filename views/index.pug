@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title Note Taking Made Easy
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/style.css")
+  header
+  h1
+    | Note Taking Made Easy
+  body
+    main
+      .new-card
+        div
+          textarea(name="title", type="text", placeholder="title", rows="1")
+        div
+          textarea(name="body", type="text", placeholder="note", rows="4")
+        input(type="submit", value="enter")
+      div
+        h2 old/recent notes
+        .card
+          .title
+            | Title Goes Here
+          .date
+            | Date
+          .note
+            | Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem
+            | ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum,
+            | sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri
+            | monea.
+            .action-btn
+              span.edit EDIT
+              span.del DEL
+        .card
+          .title
+            | Title Goes Here
+          .date
+            | Date
+          .note
+            | Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem
+            | ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum,
+            | sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri
+            | monea.
+            .action-btn
+              span.edit EDIT
+              span.del DEL
+        //include card
+        block card
+        block card
+        block card
+    script(src="/client.js")
