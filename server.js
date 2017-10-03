@@ -3,8 +3,8 @@ const express = require('express')
 const app = express()
 const routes = require('./routes')
 const jsonParser = require('body-parser').json
+app.locals.moment = require('moment')
 
-//purely for connection testing - will remove
 const mongoose = require('mongoose')
 const mongoDB = process.env.MLAB
 mongoose.Promise = global.Promise
