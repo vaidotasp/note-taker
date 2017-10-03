@@ -56,7 +56,6 @@ main {
 
 textarea {
   width: 100%;
-  /*   min-height:4rem; */
   font-size: 1rem;
   border: none;
   resize: none;
@@ -106,9 +105,12 @@ input[type='submit']:hover {
 }
 
 .title {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .action-btn {
+  margin-top: 10px;
   float: right;
 }
 

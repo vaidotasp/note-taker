@@ -10,17 +10,14 @@ block content
         input(type="submit", value="enter")
     div
       h2 old/recent notes
+    each val in cards
       .card
         .title
-          | Title Goes Here
+          =val.title
         .date
-          | Date
+          =moment(val.updatedAt).format('DD.MM.YYY')
         .note
-          | Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem
-          | ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum,
-          | sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri monea. Notes go here. Lorem ipsum sum, sum ini tri
-          | monea.
+          =val.body
           .action-btn
             span.edit EDIT
             span.del DEL
-          p #{cards}
