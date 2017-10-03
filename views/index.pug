@@ -11,7 +11,7 @@ block content
     div
       h2 old/recent notes
     each val in cards
-      .card
+      .card(data-id= val._id)
         .title
           =val.title
         .date
