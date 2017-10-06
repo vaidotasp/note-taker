@@ -40,7 +40,7 @@ router.put('/card/:id', function(req, res, next) {
   let updates = {
     title: req.body.title,
     body: req.body.body,
-    updatedAt: new Date() //FIXME: this can be implemented in Schema by using methonds => need to figure out how later
+    updatedAt: new Date() //FIXME: this can be implemented in Schema by using methods => need to figure out how later
   }
   Card.findOneAndUpdate(
     { _id: req.params.id },

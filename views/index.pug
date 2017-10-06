@@ -12,11 +12,11 @@ block content
       h2 old/recent notes
     each val in cards
       .card(data-id= val._id)
-        .title
+        .title(contenteditable='true')
           =val.title
         .date
           =moment(val.updatedAt).format('DD.MM.YYY')
-        .note
+        .note(contenteditable='true')
           =val.body
           .action-btn
             span.edit EDIT
