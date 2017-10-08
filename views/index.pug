@@ -3,21 +3,22 @@ extends layout
 block content
   main
     .new-card
-      div
-        textarea(name="title", type="text", placeholder="title", rows="1")
-      div
-        textarea(name="body", type="text", placeholder="note", rows="4")
-        input(type="submit", value="enter")
+      form(action="/newcard", method="post")
+        div
+          textarea(id="newtitle", name="title", type="text", placeholder="title", rows="1", maxlength="80", required="true")
+        div
+          textarea(id="newbody", name="body", type="text", placeholder="note", rows="6", required="true")
+          input(id="enter" type="submit", value="enter")
     div
       h2 old/recent notes
     each val in cards
       .card(data-id= val._id)
-        .title(contenteditable='true')
+        .title(contenteditable='false')
           =val.title
         .date
-          =moment(val.updatedAt).format('DD.MM.YYY')
-        .note(contenteditable='true')
+          =moment(val.updatedAt).format('DD.MM.YY')
+        .note(contenteditable='false')
           =val.body
-          .action-btn
-            span.edit EDIT
-            span.del DEL
+        .action-btn(contenteditable='false')
+          span.edit EDIT
+          span.del DEL

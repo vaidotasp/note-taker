@@ -25,12 +25,9 @@
     "url": ""
   },
   "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ],
+  "keywords": ["node", "glitch", "express"],
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "prettier": "^1.7.4"
   }
 }

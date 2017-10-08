@@ -1,9 +1,7 @@
-/*
-TODO: 
-*/
 const express = require('express')
 const router = express.Router()
 const Card = require('./models/cardInstance')
+const moment = require('moment')
 
 router.get('/', function(req, res, next) {
   //res.sendFile(__dirname + '/views/index.html')
@@ -19,11 +17,8 @@ router.get('/', function(req, res, next) {
 })
 
 router.post('/newcard', function(req, res, next) {
-  //grab value from the new card fields {mock for now}
-  let title = 'My New Card'
-  let body =
-    'This is my cards body, which contains my best thoughts on the matter, thanks so much'
-  //create a card instance from those fields
+  let title = req.body.title
+  let body = req.body.body
   let newCard = new Card({
     title: title,
     body: body
@@ -32,7 +27,15 @@ router.post('/newcard', function(req, res, next) {
   newCard.save(function(err, card) {
     if (err) return next(err)
     res.status(201)
-    res.json(card)
+    //find all cards and display
+    Card.find({})
+      .sort({ updatedAt: -1 })
+      .exec(function(err, cards) {
+        if (err) return next(err)
+        res.render('index', {
+          cards: cards
+        })
+      })
   })
 })
 
@@ -45,10 +48,14 @@ router.put('/card/:id', function(req, res, next) {
   Card.findOneAndUpdate(
     { _id: req.params.id },
     updates,
-    { upsert: true },
+    {
+      upsert: true,
+      new: true
+    },
     function(err, doc) {
       if (err) return next(err)
-      res.json(doc)
+      let formattedUpdateTime = moment(doc.updatedAt).format('DD.MM.YY')
+      res.json(formattedUpdateTime)
     }
   )
 })

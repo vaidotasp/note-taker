@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const routes = require('./routes')
 const jsonParser = require('body-parser').json
+const bodyParser = require('body-parser')
 app.locals.moment = require('moment')
 
 const mongoose = require('mongoose')
@@ -15,6 +16,7 @@ let dbconnection = mongoose
 
 app.set('view engine', 'pug')
 app.use(jsonParser())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.use(routes)
 
