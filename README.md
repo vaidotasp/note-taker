@@ -14,4 +14,4 @@ Frontend:
 * VanillaJS for everything else
 
 Project Link:
-(www.example.com)
+(https://note-taker-app.glitch.me/)
