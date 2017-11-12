@@ -4,7 +4,6 @@ const Card = require('./models/cardInstance')
 const moment = require('moment')
 
 router.get('/', function(req, res, next) {
-  //res.sendFile(__dirname + '/views/index.html')
   Card.find({})
     .sort({ updatedAt: -1 })
     .exec(function(err, cards) {

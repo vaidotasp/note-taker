@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700');
+
 html {
   font-size: 17px;
 }
@@ -9,12 +11,15 @@ body {
 h1 {
   text-align: center;
   margin-top: 3.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
 }
 
 h2 {
   text-align: center;
   font-size: 1.5rem;
   margin-top: 2.5rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -26,6 +31,7 @@ main {
   align-content: center;
   margin: 0 auto;
   margin-top: 4rem;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .new-card {

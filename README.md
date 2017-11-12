@@ -4,6 +4,9 @@
 
 A simple note taking application built in order to learn API routing, MongoDB interactions and Pug template engine.
 
+Project Link:
+(https://note-taker-app.glitch.me/)
+
 Backend:
 * NodeJS/Express
 * MongoDB/Mongoose
@@ -13,5 +16,5 @@ Frontend:
 * Pug for templating
 * VanillaJS for everything else
 
-Project Link:
-(https://note-taker-app.glitch.me/)
+**Demo**
+![](https://media.giphy.com/media/xT0xeNEwdRoar3R5lK/giphy.gif)
