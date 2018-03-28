@@ -10,7 +10,7 @@ block content
           textarea(id="newbody", name="body", type="text", placeholder="note", rows="6", required="true")
           input(id="enter" type="submit", value="enter")
     div
-      h2 old/recent notes
+      h2 recent notes
     each val in cards
       .card(data-id= val._id)
         .title(contenteditable='false')
